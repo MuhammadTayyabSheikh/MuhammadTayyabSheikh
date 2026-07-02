@@ -38,7 +38,9 @@ jobs:
         continue-on-error: true
         working-directory: github-readme-stats
         env:
-          PAT_1: ${{ secrets.GITHUB_TOKEN }}
+          # PERSONAL_TOKEN (a classic PAT with repo + read:user scopes) lets the
+          # cards count private contributions; falls back to public-only stats.
+          PAT_1: ${{ secrets.PERSONAL_TOKEN || secrets.GITHUB_TOKEN }}
         run: |
           npm ci
           node express.js &
@@ -46,9 +48,9 @@ jobs:
           dark="theme=transparent&title_color=58A6FF&icon_color=BC8CFF&text_color=9FA6B2&hide_border=true"
           light="theme=transparent&title_color=0969DA&icon_color=8250DF&text_color=57606A&hide_border=true"
           curl -sfS -o ../dist/stats.svg \
-            "http://localhost:9000/api?username=${{ github.repository_owner }}&show_icons=true&rank_icon=github&$dark"
+            "http://localhost:9000/api?username=${{ github.repository_owner }}&show_icons=true&rank_icon=github&count_private=true&hide=issues,contribs&$dark"
           curl -sfS -o ../dist/stats-light.svg \
-            "http://localhost:9000/api?username=${{ github.repository_owner }}&show_icons=true&rank_icon=github&$light"
+            "http://localhost:9000/api?username=${{ github.repository_owner }}&show_icons=true&rank_icon=github&count_private=true&hide=issues,contribs&$light"
           curl -sfS -o ../dist/top-langs.svg \
             "http://localhost:9000/api/top-langs?username=${{ github.repository_owner }}&layout=compact&langs_count=8&$dark"
           curl -sfS -o ../dist/top-langs-light.svg \
@@ -59,7 +61,7 @@ jobs:
         continue-on-error: true
         uses: yoshi389111/github-profile-3d-contrib@latest
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN || secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
       - name: collect 3D graphs
