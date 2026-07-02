@@ -33,12 +33,21 @@
 <h2 align="center">📊 GitHub Analytics</h2>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/MuhammadTayyabSheikh/MuhammadTayyabSheikh/output/stats.svg" height="165" alt="stats" />
-  <img src="https://raw.githubusercontent.com/MuhammadTayyabSheikh/MuhammadTayyabSheikh/output/top-langs.svg" height="165" alt="languages" />
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MuhammadTayyabSheikh/MuhammadTayyabSheikh/output/stats-light.svg" />
+    <img src="https://raw.githubusercontent.com/MuhammadTayyabSheikh/MuhammadTayyabSheikh/output/stats.svg" height="165" alt="stats" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MuhammadTayyabSheikh/MuhammadTayyabSheikh/output/top-langs-light.svg" />
+    <img src="https://raw.githubusercontent.com/MuhammadTayyabSheikh/MuhammadTayyabSheikh/output/top-langs.svg" height="165" alt="languages" />
+  </picture>
 </div>
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=MuhammadTayyabSheikh&theme=transparent&hide_border=true&ring=58A6FF&fire=BC8CFF&currStreakLabel=58A6FF&sideLabels=9FA6B2&currStreakNum=fff&sideNums=fff&dates=9FA6B2" height="165" alt="streak" />
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=MuhammadTayyabSheikh&theme=transparent&hide_border=true&ring=0969DA&fire=8250DF&currStreakLabel=0969DA&sideLabels=57606A&currStreakNum=24292F&sideNums=24292F&dates=57606A" />
+    <img src="https://streak-stats.demolab.com?user=MuhammadTayyabSheikh&theme=transparent&hide_border=true&ring=58A6FF&fire=BC8CFF&currStreakLabel=58A6FF&sideLabels=9FA6B2&currStreakNum=fff&sideNums=fff&dates=9FA6B2" height="165" alt="streak" />
+  </picture>
 </div>
 
 <div align="center">
