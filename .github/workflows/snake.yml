@@ -26,6 +26,14 @@ jobs:
             dist/snake.svg
             dist/snake-dark.svg?palette=github-dark
 
+      - name: check token visibility
+        env:
+          TOKEN: ${{ secrets.PERSONAL_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          echo "PERSONAL_TOKEN secret present: ${{ secrets.PERSONAL_TOKEN != '' }}"
+          curl -s -H "Authorization: bearer $TOKEN" https://api.github.com/graphql -d \
+            '{"query":"{ viewer { login } user(login: \"MuhammadTayyabSheikh\") { pullRequests { totalCount } contributionsCollection { totalCommitContributions restrictedContributionsCount contributionCalendar { totalContributions } } } }"}'
+
       - name: checkout github-readme-stats
         uses: actions/checkout@v4
         with:
