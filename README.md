@@ -42,7 +42,11 @@
 </div>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MuhammadTayyabSheikh&bg_color=transparent&color=9FA6B2&line=58A6FF&point=BC8CFF&area=true&area_color=1a1b27&hide_border=true&radius=16" width="92%" alt="activity graph" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MuhammadTayyabSheikh/MuhammadTayyabSheikh/output/profile-night-rainbow.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MuhammadTayyabSheikh/MuhammadTayyabSheikh/output/profile-season-animate.svg" />
+    <img src="https://raw.githubusercontent.com/MuhammadTayyabSheikh/MuhammadTayyabSheikh/output/profile-night-rainbow.svg" width="92%" alt="3D contribution graph" />
+  </picture>
 </div>
 
 <br/>
