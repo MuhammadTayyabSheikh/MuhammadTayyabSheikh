@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Building+modern+web+experiences+%F0%9F%9A%80;JavaScript+%E2%80%A2+TypeScript+%E2%80%A2+React+%E2%80%A2+Node;Clean+code%2C+shipped+fast+%E2%9A%A1" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=800&lines=Building+modern+web+experiences+%F0%9F%9A%80;JavaScript+%E2%80%A2+TypeScript+%E2%80%A2+React+%E2%80%A2+Node.js;Clean+code%2C+shipped+fast+%E2%9A%A1" alt="Typing SVG" />
 </div>
 
 <div align="center">
@@ -33,8 +33,8 @@
 <h2 align="center">📊 GitHub Analytics</h2>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=MuhammadTayyabSheikh&show_icons=true&theme=transparent&title_color=58A6FF&icon_color=BC8CFF&text_color=9FA6B2&hide_border=true&count_private=true" height="165" alt="stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MuhammadTayyabSheikh&layout=compact&theme=transparent&title_color=58A6FF&text_color=9FA6B2&hide_border=true&langs_count=8" height="165" alt="languages" />
+  <img src="https://raw.githubusercontent.com/MuhammadTayyabSheikh/MuhammadTayyabSheikh/output/stats.svg" height="165" alt="stats" />
+  <img src="https://raw.githubusercontent.com/MuhammadTayyabSheikh/MuhammadTayyabSheikh/output/top-langs.svg" height="165" alt="languages" />
 </div>
 
 <div align="center">

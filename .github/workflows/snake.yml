@@ -1,4 +1,4 @@
-name: Generate snake animation
+name: Generate profile assets
 
 on:
   schedule: # execute every 12 hours
@@ -15,7 +15,7 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
 
     steps:
       - name: generate snake.svg
@@ -26,7 +26,14 @@ jobs:
             dist/snake.svg
             dist/snake-dark.svg?palette=github-dark
 
-      - name: push snake.svg to the output branch
+      - name: download stats cards
+        run: |
+          curl -sf --retry 5 --retry-delay 15 --retry-all-errors -o dist/stats.svg \
+            "https://github-readme-stats.vercel.app/api?username=MuhammadTayyabSheikh&show_icons=true&theme=transparent&title_color=58A6FF&icon_color=BC8CFF&text_color=9FA6B2&hide_border=true&rank_icon=github"
+          curl -sf --retry 5 --retry-delay 15 --retry-all-errors -o dist/top-langs.svg \
+            "https://github-readme-stats.vercel.app/api/top-langs/?username=MuhammadTayyabSheikh&layout=compact&theme=transparent&title_color=58A6FF&text_color=9FA6B2&hide_border=true&langs_count=8"
+
+      - name: push assets to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
