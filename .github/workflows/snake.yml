@@ -46,9 +46,9 @@ jobs:
           dark="theme=transparent&title_color=58A6FF&icon_color=BC8CFF&text_color=9FA6B2&hide_border=true"
           light="theme=transparent&title_color=0969DA&icon_color=8250DF&text_color=57606A&hide_border=true"
           curl -sfS -o ../dist/stats.svg \
-            "http://localhost:9000/api?username=${{ github.repository_owner }}&show_icons=true&rank_icon=github&$dark"
+            "http://localhost:9000/api?username=${{ github.repository_owner }}&show_icons=true&rank_icon=github&include_all_commits=true&count_private=true&$dark"
           curl -sfS -o ../dist/stats-light.svg \
-            "http://localhost:9000/api?username=${{ github.repository_owner }}&show_icons=true&rank_icon=github&$light"
+            "http://localhost:9000/api?username=${{ github.repository_owner }}&show_icons=true&rank_icon=github&include_all_commits=true&count_private=true&$light"
           curl -sfS -o ../dist/top-langs.svg \
             "http://localhost:9000/api/top-langs?username=${{ github.repository_owner }}&layout=compact&langs_count=8&$dark"
           curl -sfS -o ../dist/top-langs-light.svg \
