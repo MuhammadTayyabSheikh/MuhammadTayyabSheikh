@@ -26,14 +26,6 @@ jobs:
             dist/snake.svg
             dist/snake-dark.svg?palette=github-dark
 
-      - name: check token visibility
-        env:
-          TOKEN: ${{ secrets.PERSONAL_TOKEN || secrets.GITHUB_TOKEN }}
-        run: |
-          echo "PERSONAL_TOKEN secret present: ${{ secrets.PERSONAL_TOKEN != '' }}"
-          curl -s -H "Authorization: bearer $TOKEN" https://api.github.com/graphql -d \
-            '{"query":"{ viewer { login } user(login: \"MuhammadTayyabSheikh\") { pullRequests { totalCount } contributionsCollection { totalCommitContributions restrictedContributionsCount contributionCalendar { totalContributions } } } }"}'
-
       - name: checkout github-readme-stats
         uses: actions/checkout@v4
         with:
@@ -56,9 +48,9 @@ jobs:
           dark="theme=transparent&title_color=58A6FF&icon_color=BC8CFF&text_color=9FA6B2&hide_border=true"
           light="theme=transparent&title_color=0969DA&icon_color=8250DF&text_color=57606A&hide_border=true"
           curl -sfS -o ../dist/stats.svg \
-            "http://localhost:9000/api?username=${{ github.repository_owner }}&show_icons=true&rank_icon=github&include_all_commits=true&count_private=true&$dark"
+            "http://localhost:9000/api?username=${{ github.repository_owner }}&show_icons=true&rank_icon=github&count_private=true&hide=issues,contribs&$dark"
           curl -sfS -o ../dist/stats-light.svg \
-            "http://localhost:9000/api?username=${{ github.repository_owner }}&show_icons=true&rank_icon=github&include_all_commits=true&count_private=true&$light"
+            "http://localhost:9000/api?username=${{ github.repository_owner }}&show_icons=true&rank_icon=github&count_private=true&hide=issues,contribs&$light"
           curl -sfS -o ../dist/top-langs.svg \
             "http://localhost:9000/api/top-langs?username=${{ github.repository_owner }}&layout=compact&langs_count=8&$dark"
           curl -sfS -o ../dist/top-langs-light.svg \
